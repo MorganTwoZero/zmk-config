@@ -13,3 +13,4 @@ if SHIELD_LETS14X4_LEFT || SHIELD_LETS14X4_RIGHT
 config ZMK_SPLIT
     default y
 
+endif
