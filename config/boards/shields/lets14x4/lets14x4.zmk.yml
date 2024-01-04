@@ -1,0 +1,10 @@
+file_format: "1"
+id: lets14x4 
+name: lets14x4
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - lets14x4_left
+  - lets14x4_right
