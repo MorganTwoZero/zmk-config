@@ -5,6 +5,8 @@
 #define DEFAULT 0
 #define RAISE   1
 
+&sl { /delete-property/ quick-release; };
+
 / {
     behaviors {
         mo_tog: mo_tog {
