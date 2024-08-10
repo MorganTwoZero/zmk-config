@@ -1,14 +1,5 @@
 #include "lets14x4.dtsi"
 
-/ {
-    default_layout: default_layout {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
-        kscan = <&kscan0>;
-    };
-};
-
 &default_transform {
     col-offset = <7>;
 };
