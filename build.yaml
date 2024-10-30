@@ -1,2 +1,2 @@
 board: [ "nice_nano_v2" ]
-shield: [ "lets14x4_left", "lets14x4_right" ]
+shield: [ "lets14x4_left", "lets14x4_right", "settings_reset" ]
