@@ -1,0 +1,5 @@
+config SHIELD_FERRIS38_LEFT
+    def_bool $(shields_list_contains,ferris38_left)
+
+config SHIELD_FERRIS38_RIGHT
+    def_bool $(shields_list_contains,ferris38_right)

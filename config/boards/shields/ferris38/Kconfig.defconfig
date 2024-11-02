@@ -1,0 +1,16 @@
+if SHIELD_FERRIS38_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "ferris38"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_FERRIS38_LEFT || SHIELD_FERRIS38_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

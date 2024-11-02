@@ -1,0 +1,10 @@
+file_format: "1"
+id: ferris38 
+name: ferris38
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - ferris38_left
+  - ferris38_right
