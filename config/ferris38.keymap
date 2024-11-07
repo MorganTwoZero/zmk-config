@@ -43,9 +43,8 @@
         };
 
         numlayer {
-            bindings = <&tog 1>;
+            bindings = <&to 1>;
             key-positions = <32 22 21 31 21 22 31 32 21 22 31 32 21 22 31 32>;
-            layers = <0>;
         };
     };
 
