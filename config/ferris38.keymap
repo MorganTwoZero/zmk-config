@@ -44,7 +44,7 @@
 
         numlayer {
             bindings = <&to 1>;
-            key-positions = <32 22 22 32 22 32 22 32 12>;
+            key-positions = <17 27>;
         };
     };
 
