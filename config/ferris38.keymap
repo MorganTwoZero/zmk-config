@@ -31,8 +31,8 @@
             layers = <0>;
         };
 
-        square_parenth_combo {
-            bindings = <&kp LEFT_BRACKET>;
+        brackets_combo {
+            bindings = <&tap_prefrerred_holdtap LEFT_BRACE LEFT_BRACKET>;
             key-positions = <2 3>;
         };
 
