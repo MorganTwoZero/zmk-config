@@ -13,4 +13,7 @@ if SHIELD_FERRIS38_LEFT || SHIELD_FERRIS38_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_STUDIO
+    default y
+
 endif
