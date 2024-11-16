@@ -32,7 +32,7 @@
         };
 
         brackets_combo {
-            bindings = <&tap_prefrerred_holdtap LEFT_BRACE LEFT_BRACKET>;
+            bindings = <&tap_prefrerred_holdtap RIGHT_BRACKET LEFT_BRACKET>;
             key-positions = <2 3>;
         };
 
