@@ -32,7 +32,7 @@
         };
 
         tab_tilde_combo {
-            bindings = <&mt TILDE TAB>;
+            bindings = <&mt GRAVE TAB>;
             key-positions = <9 10>;
         };
     };
