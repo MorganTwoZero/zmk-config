@@ -83,7 +83,8 @@
             bindings = <&kp RIGHT>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RGUI|MOD_RALT)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RGUI|MOD_RALT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mod_morph_bckslsh: mod_morph_bckslsh {
