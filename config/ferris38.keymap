@@ -36,11 +36,6 @@
             bindings = <&mt GRAVE TAB>;
             key-positions = <9 10>;
         };
-
-        del_combo {
-            bindings = <&kp DEL>;
-            key-positions = <38 28>;
-        };
     };
 
     behaviors {
@@ -81,6 +76,42 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
+
+        mod_morph_del: mod_morph_del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_MORPH_DEL";
+            bindings = <&kp RIGHT>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RGUI|MOD_RALT)>;
+        };
+
+        mod_morph_bckslsh: mod_morph_bckslsh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOD_MORPH_BCKSLSH";
+            bindings = <&kp UP_ARROW>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RGUI|MOD_RSFT|MOD_RALT)>;
+        };
+
+        nested_holdtap: nested_holdtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NESTED_HOLDTAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&holdtap_macro>, <&kp>;
+        };
+    };
+
+    macros {
+        holdtap_macro: holdtap_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tap_prefrerred_holdtap RIGHT_BRACKET LEFT_BRACKET>;
+            label = "HOLDTAP_MACRO";
+        };
     };
 
     keymap {
@@ -88,10 +119,10 @@
 
         default_layer {
             bindings = <
-                &kp W     &kp E      &kp R       &kp T        &kp Y          &kp U                            &kp I                            &kp O                                   &td_player_controls
-&kp Q           &kp S     &kp D      &kp F       &kp G        &kp H          &tap_prefrerred_holdtap MINUS J  &tap_prefrerred_holdtap EQUAL K  &tap_prefrerred_holdtap SINGLE_QUOTE L  &kp P
-&kp A           &kp X     &kp C      &kp V       &kp B        &kp N          &kp M                            &kp COMMA                        &kp DOT                                 &tap_prefrerred_holdtap FSLH SEMI
-&mt LEFT_GUI Z  &kp LALT  &kp LCTRL  &kp LSHIFT  &kp SPACE    &kp BACKSPACE  &kp LEFT                         &kp DOWN                         &kp UP                                  &kp RIGHT
+                &kp W     &kp E      &kp R       &kp T        &kp Y                &kp U                            &kp I                            &kp O                                   &td_player_controls
+&kp Q           &kp S     &kp D      &kp F       &kp G        &nested_holdtap 0 H  &tap_prefrerred_holdtap MINUS J  &tap_prefrerred_holdtap EQUAL K  &tap_prefrerred_holdtap SINGLE_QUOTE L  &kp P
+&kp A           &kp X     &kp C      &kp V       &kp B        &kp N                &kp M                            &kp COMMA                        &kp DOT                                 &tap_prefrerred_holdtap FSLH SEMI
+&mt LEFT_GUI Z  &kp LALT  &kp LCTRL  &kp LSHIFT  &kp SPACE    &kp BACKSPACE        &kp LEFT                         &kp DOWN                         &mod_morph_bckslsh                      &mod_morph_del
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP >;
