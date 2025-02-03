@@ -92,7 +92,8 @@
             bindings = <&kp UP_ARROW>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RGUI|MOD_RSFT|MOD_RALT)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RGUI|MOD_RALT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         nested_holdtap: nested_holdtap {
