@@ -126,7 +126,7 @@
 &mt LEFT_GUI Z  &kp LALT  &kp LCTRL  &kp LSHIFT  &kp SPACE    &kp BACKSPACE        &kp LEFT                         &kp DOWN                         &mod_morph_bckslsh                      &mod_morph_del
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN >;
         };
 
         numbers {
@@ -137,7 +137,7 @@
 &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &to 0        &kp BACKSPACE  &trans  &trans  &studio_unlock  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN >;
         };
 
         extra1 { status = "reserved"; };
